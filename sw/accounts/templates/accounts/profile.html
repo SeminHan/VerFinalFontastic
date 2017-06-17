@@ -1,0 +1,12 @@
+{% extends "accounts/layout.html" %}
+
+{% block content %}
+<h1>{{ user }}`s Profile</h1>
+
+<table class="table">
+	<tr class="table table tr-primary"><th>Username</th><td class="table table tr td-primary">{{ user.username }}</td></tr>
+	<tr class="table table tr-primary"><th>email</th><td class="table table tr td-primary">{{ user.email }}</td></tr>
+	<tr class="table table tr-primary"><th>Datejoined</th><td class="table table tr td-primary">{{ user.date_joined }}</td></tr>
+</table>
+<a href="{% url "blog:index" %}" class="btn btn-primary">목록으로</a>
+{% endblock %}

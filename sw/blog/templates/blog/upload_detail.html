@@ -1,0 +1,24 @@
+{% extends "accounts/layout.html" %}
+
+
+{% block content %}
+<h1>Which font is this?</h1>
+<hr />
+<br />
+<br/>
+<h2><B>Myfont may be similar with..</B></h2>
+
+{% for s in sf %}
+	<h3>{{s.title}}</h3>
+	{{s.similarity}}
+{% endfor %}
+<br />
+<hr />
+
+<h3><B>My file={{upload.photo}}</B></h3>
+<br/>
+<br/>
+
+<a href="{% url "blog:index" %}" class="btn btn-primary">목록으로</a>
+{% endblock %}
+<!-- Developed by GweonHo Jung -->
